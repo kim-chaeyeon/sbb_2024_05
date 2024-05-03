@@ -21,7 +21,7 @@ public class Answer {
     private LocalDateTime createDate;
 
     // private Integer questionId
-    @ManyToOne
+    @ManyToOne // 필수, Many = Answer, One = Question
     private Question question;
 }
 
