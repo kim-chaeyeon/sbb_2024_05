@@ -12,17 +12,17 @@ import java.time.LocalDateTime;
 @Setter
 @Entity // answer 테이블
 public class Answer {
-    @Id // primary key
+    @Id // Primary key
     @GeneratedValue(strategy = GenerationType.IDENTITY) // auto_increment
     private Integer id;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(columnDefinition = "TEXT") // text
     private String content;
 
     private LocalDateTime createDate;
 
-    // private Integer questionId
-    @ManyToOne // 필수, Many = Answer, One = Question
+    // Many = Answer, One = Question
+    // 필수
+    @ManyToOne
     private Question question;
 }
-
