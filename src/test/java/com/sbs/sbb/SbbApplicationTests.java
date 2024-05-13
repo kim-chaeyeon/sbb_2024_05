@@ -39,7 +39,7 @@ class SbbApplicationTests {
 
 		// 모든 데이터 삭제
 		questionRepository.deleteAll();
-		questionRepository.clearAutoIncrement();
+		answerRepository.clearAutoIncrement();
 
 		// 질문 1개 생성
 		Question q1 = new Question();
